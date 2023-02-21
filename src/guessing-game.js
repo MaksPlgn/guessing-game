@@ -14,18 +14,18 @@ class GuessingGame {
 //        if (this.min >= this.max) {
 //            return this.min;
 //        }
-        this.temp = Math.floor((this.min + (this.max - this.min) / 2));
+        this.temp = Math.ceil((this.min + (this.max - this.min) / 2));
 //        console.log(this.temp);
         return this.temp
     }
 
     lower() {
-        this.max = this.temp - 1;
+        this.max = this.temp;
 //        console.log(this.max);
     }
 
     greater() {
-        this.min = this.temp + 1;
+        this.min = this.temp;
 //        console.log(this.min);
     }
 }
